@@ -1,11 +1,9 @@
-if (!require("pacman")) install.packages("pacman")
-pacman::p_load(
-  "readr",
-  "dplyr",
-  "tidyverse",
-  "rvest"
-)
-
+# if (!require("pacman")) install.packages("pacman")
+# pacman::p_load(
+#   "readr",
+#   "dplyr"
+# )
+# 
 
 
 processFile = function(filepath) {
