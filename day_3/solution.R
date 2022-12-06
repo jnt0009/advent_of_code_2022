@@ -6,7 +6,7 @@ pacman::p_load(
 
 library(readr)
 
-df <- read_csv("C:/Users/JamariusTaylor/Desktop/projects/advent_of_code/day_3/input.txt", 
+df <- read_csv("../day_3/input.txt", 
                col_names = FALSE)
 
 colnames(df) <- "sack"
@@ -22,8 +22,7 @@ dict <- rbind(
   )
 )
 
-i = df$sack[8]
-
+#### Solution 2 ####
 dupe_list <- c()
 final_count <- c()
 for (i in df$sack) {
@@ -57,9 +56,10 @@ for (i in df$sack) {
 }
 
 
-#### Answer 1 
+#### Answer 1 #### 
 final_count |> sum()
 
+#### Solution 2 ####
 y <- 1
 z <- ""
 tmp <- c()
@@ -79,19 +79,13 @@ for (i in df$sack) {
     final <- append(final, step2)
 
     print(tmp)
-    # tmp <- c()
-    # print("over")
   } else {
     y <- y + 1
-    # z <- i |> strsplit("")
-    # z <- z[[1]] |> unique()  
-
-    # print("next")
   }
 }
  
 
-#### Second Answer #### 
+#### Answer 2 #### 
 plyr::mapvalues(final,
                 from = c(dict$key),
                 to = c(dict$value)) |>
