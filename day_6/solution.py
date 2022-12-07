@@ -16,4 +16,15 @@ for let in input:
         holder.pop(0)
 
 
+holder = []
+all = []
+for let in input:
+    holder.append(let)
+    all.append(let)
+    if len(holder) >= 14:
+        print(holder)
+        if len(set(holder)) == 14:
+            print(len(all))
+            break
+        holder.pop(0)
 
